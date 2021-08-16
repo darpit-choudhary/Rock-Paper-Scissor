@@ -11,6 +11,7 @@ root.config(bg = 'seashell3')
 #rock paper scissor list
 lst = ['Rock', 'Paper', 'Scissor']
 
+
 # define the reset and close function  
 def reset():
     computer_display.delete(0,tk.END)
@@ -66,7 +67,7 @@ b=tk.Button(root, text = 'Go!!', font = 'lucida 15 bold', command = play).pack()
 #black linkes to create space
 Blankline = tk.Label(root, bg = 'seashell3').pack()
 
-computer = tk.Label(root, text = 'Advanced live form chose', font = 'luida 15', bg = 'seashell3').pack(side = 'top')
+computer = tk.Label(root, text = 'Advanced life form chose', font = 'luida 15', bg = 'seashell3').pack(side = 'top')
 computer_display = tk.Entry(root, font = 'georgia 15', bg = 'antiquewhite2')
 computer_display.pack(side = 'top')
 
@@ -80,7 +81,7 @@ result_display.pack(side = 'top', fill = 'x', padx = 15)
 
 Blankline = tk.Label(root, bg = 'seashell3').pack()
 #Reset and Exit button
-b=tk.Button(root, text = 'Reset', font = 'lucida 15 bold', command = reset).pack(padx = 20, side = 'left')
+b=tk.Button(root, text = 'Reset', font = 'lucida 15 bold', command = reset, bg = 'blue').pack(padx = 20, side = 'left')
 b=tk.Button(root, text = 'Exit', font = 'lucida 15 bold', command = close).pack(padx = 20, side = 'right')
 
 root.mainloop()
