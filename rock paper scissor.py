@@ -11,9 +11,6 @@ root.config(bg = 'seashell3')
 #rock paper scissor list
 lst = ['Rock', 'Paper', 'Scissor']
 
-
-
-
 # define the reset and close function  
 def reset():
     computer_display.delete(0,tk.END)
