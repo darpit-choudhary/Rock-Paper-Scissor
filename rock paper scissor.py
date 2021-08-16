@@ -20,10 +20,11 @@ def reset():
 
 def close():
     ans = tmsg.askquestion("Exit", "Are you running away human?")
-    if ans:
+    if ans == 'yes':
         root.destroy()
     else:
         reset()
+        
 #define the play function 
 def play():
     random_output = random.choice(lst)
@@ -57,12 +58,12 @@ Blankline = tk.Label(root, bg = 'seashell3').pack()
 user = tk.Label(root, text = 'Human chose', font = 'luida 15', bg = 'seashell3').pack(side = 'top')
 #entries
 user_display = tk.Entry(root, font = 'georgia 15', bg = 'antiquewhite2')
-user_display.pack(side = 'top')
+user_display.pack(side = 'top', ipadx = 5)
 
 Blankline = tk.Label(root, bg = 'seashell3').pack()
 
 #Button
-b=tk.Button(root, text = 'Go!!', font = 'lucida 15 bold', command = play).pack()
+b=tk.Button(root, text = 'Go!!', font = 'lucida 15 bold', command = play, borderwidth = 5, relief = 'raised').pack()
 
 #black linkes to create space
 Blankline = tk.Label(root, bg = 'seashell3').pack()
@@ -81,7 +82,7 @@ result_display.pack(side = 'top', fill = 'x', padx = 15)
 
 Blankline = tk.Label(root, bg = 'seashell3').pack()
 #Reset and Exit button
-b=tk.Button(root, text = 'Reset', font = 'lucida 15 bold', command = reset, bg = 'blue').pack(padx = 20, side = 'left')
-b=tk.Button(root, text = 'Exit', font = 'lucida 15 bold', command = close).pack(padx = 20, side = 'right')
+b=tk.Button(root, text = 'Reset', font = 'lucida 15 bold', command = reset, borderwidth = 5, relief = 'raised').pack(padx = 20, side = 'left')
+b=tk.Button(root, text = 'Exit', font = 'lucida 15 bold', command = close, borderwidth = 5, relief = 'raised').pack(padx = 20, side = 'right')
 
 root.mainloop()
